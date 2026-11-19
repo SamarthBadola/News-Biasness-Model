@@ -29,3 +29,15 @@ def test_near_duplicates_grouped(data_file):
     ex[1].title, ex[1].lede = ex[0].title, ex[0].lede + " extra"
     assign_groups(ex, threshold=0.85)
     assert ex[0].group == ex[1].group
+
+
+def test_subsample_keeps_rare_classes(data_file):
+    from newsbias.data import subsample
+    ex = load_examples(data_file)
+    small = subsample(ex, 12)
+    assert len(small) == 12
+    assert {e.gender for e in small} == {"Misogynistic", "Misandrist", "Neutral"}
+    assert {e.political for e in small} == {"Left", "Center", "Right"}
+    assert [e.id for e in small] == [e.id for e in ex if e in small]   # file order kept
+    assert subsample(ex, 12) == small                                  # deterministic
+    assert subsample(ex, 1000) == ex

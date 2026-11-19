@@ -27,7 +27,7 @@ from . import baselines, report
 from .augment import RoleMasker
 from .attribution import explain
 from .config import load_config
-from .data import assign_groups, describe, file_sha256, load_examples
+from .data import assign_groups, describe, file_sha256, load_examples, subsample
 from .folds import fold_table, make_folds
 from .labels import AXES, NEUTRAL, label_index
 from .runinfo import environment
@@ -89,7 +89,7 @@ def run(args):
 
     examples = load_examples(cfg.data_path)
     if args.limit:
-        examples = examples[:args.limit]
+        examples = subsample(examples, args.limit)
     log(f"data: {cfg.data_path}\n{describe(examples)}")
 
     env = environment()
@@ -162,7 +162,7 @@ def main(argv=None):
     ap.add_argument("--model", help="override model_name (a Hub id or a local folder)")
     ap.add_argument("--epochs", type=int, help="override epochs")
     ap.add_argument("--seeds", type=int, nargs="+", help="override seeds")
-    ap.add_argument("--limit", type=int, help="use only the first N rows (smoke tests only)")
+    ap.add_argument("--limit", type=int, help="use N rows spread over all label combinations (smoke tests only)")
     ap.add_argument("--results", default=str(RESULTS), help=argparse.SUPPRESS)
     ap.add_argument("--overwrite", action="store_true", help="delete an existing run with different settings")
     run(ap.parse_args(argv))

@@ -11,6 +11,7 @@ The source file (news-bias-dataset/data/annotated/art_A1.jsonl) is only read, ne
 """
 import hashlib
 import json
+import random
 from collections import Counter
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -110,6 +111,29 @@ def load_examples(path):
     if dupes:
         raise DataError(f"{len(dupes)} exact duplicate text(s) in {path}; remove them in the dataset repo")
     return examples
+
+
+def subsample(examples, n, seed=0):
+    """``n`` rows for a quick smoke run, spread over every political x gender combination.
+
+    Taking the first n rows of the file is not enough: the corpus was collected in batches, so the first 40 rows
+    hold one Misogynistic row and no Misandrist ones, and a fold would end up training on a single class. This
+    takes rows round-robin from each label combination, so rare classes appear as long as they exist.
+    """
+    if n >= len(examples):
+        return list(examples)
+    rng = random.Random(seed)
+    groups = {}
+    for e in examples:
+        groups.setdefault((e.political, e.gender), []).append(e)
+    queues = [rng.sample(g, len(g)) for _, g in sorted(groups.items())]
+    picked = []
+    while len(picked) < n:
+        for q in queues:
+            if q and len(picked) < n:
+                picked.append(q.pop())
+    keep = {e.id for e in picked}
+    return [e for e in examples if e.id in keep]
 
 
 def assign_groups(examples, threshold=0.5):
