@@ -537,7 +537,7 @@
     "nll_before": 0.7486079066788793,
     "nll_after": 0.6762835171696218,
     "ece_before": 0.13160336608912832,
-    "ece_after": 0.04862148873446456
+    "ece_after": 0.04862148873446458
    },
    "gender": {
     "temperature": 1.5549281849069672,
@@ -844,7 +844,642 @@
      "n": 165
     }
    }
-  }
+  },
+  "confidence": {
+   "political": {
+    "high": {
+     "biased_rows": 26,
+     "biased_found": 15,
+     "rows": 107,
+     "correct": 87
+    },
+    "medium": {
+     "biased_rows": 33,
+     "biased_found": 11,
+     "rows": 50,
+     "correct": 24
+    },
+    "low": {
+     "biased_rows": 6,
+     "biased_found": 1,
+     "rows": 8,
+     "correct": 1
+    }
+   },
+   "gender": {
+    "high": {
+     "biased_rows": 23,
+     "biased_found": 18,
+     "rows": 150,
+     "correct": 139
+    },
+    "medium": {
+     "biased_rows": 9,
+     "biased_found": 5,
+     "rows": 11,
+     "correct": 7
+    },
+    "low": {
+     "biased_rows": 4,
+     "biased_found": 0,
+     "rows": 4,
+     "correct": 0
+    }
+   }
+  },
+  "errors": {
+   "political": [
+    {
+     "id": "art-0003",
+     "gold": "Right",
+     "predicted": "Center",
+     "p_gold": 0.036,
+     "confidence": "low",
+     "article_type": "news"
+    },
+    {
+     "id": "art-0011",
+     "gold": "Center",
+     "predicted": "Right",
+     "p_gold": 0.008,
+     "confidence": "high",
+     "article_type": "news"
+    },
+    {
+     "id": "art-0017",
+     "gold": "Center",
+     "predicted": "Right",
+     "p_gold": 0.13,
+     "confidence": "high",
+     "article_type": "analysis"
+    },
+    {
+     "id": "art-0020",
+     "gold": "Center",
+     "predicted": "Right",
+     "p_gold": 0.211,
+     "confidence": "high",
+     "article_type": "news"
+    },
+    {
+     "id": "art-0022",
+     "gold": "Left",
+     "predicted": "Center",
+     "p_gold": 0.424,
+     "confidence": "high",
+     "article_type": "news"
+    },
+    {
+     "id": "art-0026",
+     "gold": "Left",
+     "predicted": "Center",
+     "p_gold": 0.195,
+     "confidence": "low",
+     "article_type": "news"
+    },
+    {
+     "id": "art-0028",
+     "gold": "Right",
+     "predicted": "Center",
+     "p_gold": 0.095,
+     "confidence": "medium",
+     "article_type": "news"
+    },
+    {
+     "id": "art-0031",
+     "gold": "Left",
+     "predicted": "Center",
+     "p_gold": 0.392,
+     "confidence": "medium",
+     "article_type": "news"
+    },
+    {
+     "id": "art-0037",
+     "gold": "Left",
+     "predicted": "Right",
+     "p_gold": 0.354,
+     "confidence": "high",
+     "article_type": "news"
+    },
+    {
+     "id": "art-0045",
+     "gold": "Center",
+     "predicted": "Right",
+     "p_gold": 0.353,
+     "confidence": "high",
+     "article_type": "analysis"
+    },
+    {
+     "id": "art-0048",
+     "gold": "Center",
+     "predicted": "Right",
+     "p_gold": 0.114,
+     "confidence": "high",
+     "article_type": "analysis"
+    },
+    {
+     "id": "art-0057",
+     "gold": "Right",
+     "predicted": "Center",
+     "p_gold": 0.221,
+     "confidence": "medium",
+     "article_type": "news"
+    },
+    {
+     "id": "art-0068",
+     "gold": "Right",
+     "predicted": "Center",
+     "p_gold": 0.358,
+     "confidence": "low",
+     "article_type": "analysis"
+    },
+    {
+     "id": "art-0071",
+     "gold": "Left",
+     "predicted": "Right",
+     "p_gold": 0.253,
+     "confidence": "medium",
+     "article_type": "news"
+    },
+    {
+     "id": "art-0075",
+     "gold": "Right",
+     "predicted": "Left",
+     "p_gold": 0.114,
+     "confidence": "high",
+     "article_type": "opinion"
+    },
+    {
+     "id": "art-0077",
+     "gold": "Left",
+     "predicted": "Right",
+     "p_gold": 0.002,
+     "confidence": "medium",
+     "article_type": "opinion"
+    },
+    {
+     "id": "art-0086",
+     "gold": "Right",
+     "predicted": "Center",
+     "p_gold": 0.075,
+     "confidence": "high",
+     "article_type": "news"
+    },
+    {
+     "id": "art-0090",
+     "gold": "Center",
+     "predicted": "Left",
+     "p_gold": 0.23,
+     "confidence": "high",
+     "article_type": "analysis"
+    },
+    {
+     "id": "art-0114",
+     "gold": "Right",
+     "predicted": "Center",
+     "p_gold": 0.133,
+     "confidence": "medium",
+     "article_type": "news"
+    },
+    {
+     "id": "art-0123",
+     "gold": "Center",
+     "predicted": "Right",
+     "p_gold": 0.265,
+     "confidence": "high",
+     "article_type": "news"
+    },
+    {
+     "id": "art-0125",
+     "gold": "Right",
+     "predicted": "Center",
+     "p_gold": 0.05,
+     "confidence": "medium",
+     "article_type": "news"
+    },
+    {
+     "id": "art-0132",
+     "gold": "Right",
+     "predicted": "Left",
+     "p_gold": 0.073,
+     "confidence": "high",
+     "article_type": "opinion"
+    },
+    {
+     "id": "art-0143",
+     "gold": "Left",
+     "predicted": "Center",
+     "p_gold": 0.139,
+     "confidence": "medium",
+     "article_type": "news"
+    },
+    {
+     "id": "art-0152",
+     "gold": "Left",
+     "predicted": "Center",
+     "p_gold": 0.127,
+     "confidence": "medium",
+     "article_type": "opinion"
+    },
+    {
+     "id": "art-0155",
+     "gold": "Left",
+     "predicted": "Center",
+     "p_gold": 0.378,
+     "confidence": "medium",
+     "article_type": "analysis"
+    },
+    {
+     "id": "art-0160",
+     "gold": "Right",
+     "predicted": "Center",
+     "p_gold": 0.429,
+     "confidence": "medium",
+     "article_type": "news"
+    },
+    {
+     "id": "art-0163",
+     "gold": "Center",
+     "predicted": "Left",
+     "p_gold": 0.359,
+     "confidence": "medium",
+     "article_type": "news"
+    },
+    {
+     "id": "art-0164",
+     "gold": "Right",
+     "predicted": "Center",
+     "p_gold": 0.038,
+     "confidence": "medium",
+     "article_type": "news"
+    },
+    {
+     "id": "art-0171",
+     "gold": "Left",
+     "predicted": "Center",
+     "p_gold": 0.052,
+     "confidence": "medium",
+     "article_type": "opinion"
+    },
+    {
+     "id": "art-0174",
+     "gold": "Left",
+     "predicted": "Right",
+     "p_gold": 0.056,
+     "confidence": "medium",
+     "article_type": "news"
+    },
+    {
+     "id": "art-0176",
+     "gold": "Center",
+     "predicted": "Left",
+     "p_gold": 0.261,
+     "confidence": "high",
+     "article_type": "opinion"
+    },
+    {
+     "id": "art-0183",
+     "gold": "Left",
+     "predicted": "Center",
+     "p_gold": 0.216,
+     "confidence": "medium",
+     "article_type": "analysis"
+    },
+    {
+     "id": "art-0188",
+     "gold": "Center",
+     "predicted": "Left",
+     "p_gold": 0.294,
+     "confidence": "medium",
+     "article_type": "news"
+    },
+    {
+     "id": "art-0197",
+     "gold": "Left",
+     "predicted": "Right",
+     "p_gold": 0.248,
+     "confidence": "low",
+     "article_type": "news"
+    },
+    {
+     "id": "art-0200",
+     "gold": "Left",
+     "predicted": "Center",
+     "p_gold": 0.053,
+     "confidence": "medium",
+     "article_type": "news"
+    },
+    {
+     "id": "art-0202",
+     "gold": "Left",
+     "predicted": "Center",
+     "p_gold": 0.257,
+     "confidence": "medium",
+     "article_type": "news"
+    },
+    {
+     "id": "art-0205",
+     "gold": "Right",
+     "predicted": "Center",
+     "p_gold": 0.327,
+     "confidence": "medium",
+     "article_type": "opinion"
+    },
+    {
+     "id": "art-0210",
+     "gold": "Left",
+     "predicted": "Center",
+     "p_gold": 0.266,
+     "confidence": "high",
+     "article_type": "opinion"
+    },
+    {
+     "id": "art-0231",
+     "gold": "Left",
+     "predicted": "Center",
+     "p_gold": 0.497,
+     "confidence": "high",
+     "article_type": "analysis"
+    },
+    {
+     "id": "art-0238",
+     "gold": "Center",
+     "predicted": "Left",
+     "p_gold": 0.449,
+     "confidence": "medium",
+     "article_type": "opinion"
+    },
+    {
+     "id": "art-0247",
+     "gold": "Center",
+     "predicted": "Left",
+     "p_gold": 0.136,
+     "confidence": "medium",
+     "article_type": "opinion"
+    },
+    {
+     "id": "art-0252",
+     "gold": "Left",
+     "predicted": "Center",
+     "p_gold": 0.331,
+     "confidence": "high",
+     "article_type": "news"
+    },
+    {
+     "id": "art-0259",
+     "gold": "Left",
+     "predicted": "Center",
+     "p_gold": 0.028,
+     "confidence": "low",
+     "article_type": "opinion"
+    },
+    {
+     "id": "art-0262",
+     "gold": "Left",
+     "predicted": "Center",
+     "p_gold": 0.066,
+     "confidence": "medium",
+     "article_type": "news"
+    },
+    {
+     "id": "art-0268",
+     "gold": "Left",
+     "predicted": "Center",
+     "p_gold": 0.076,
+     "confidence": "medium",
+     "article_type": "analysis"
+    },
+    {
+     "id": "art-0271",
+     "gold": "Left",
+     "predicted": "Center",
+     "p_gold": 0.22,
+     "confidence": "medium",
+     "article_type": "analysis"
+    },
+    {
+     "id": "art-0274",
+     "gold": "Left",
+     "predicted": "Center",
+     "p_gold": 0.321,
+     "confidence": "medium",
+     "article_type": "opinion"
+    },
+    {
+     "id": "art-0289",
+     "gold": "Right",
+     "predicted": "Left",
+     "p_gold": 0.104,
+     "confidence": "high",
+     "article_type": "opinion"
+    },
+    {
+     "id": "art-0290",
+     "gold": "Right",
+     "predicted": "Center",
+     "p_gold": 0.275,
+     "confidence": "high",
+     "article_type": "opinion"
+    },
+    {
+     "id": "art-0292",
+     "gold": "Center",
+     "predicted": "Left",
+     "p_gold": 0.285,
+     "confidence": "high",
+     "article_type": "opinion"
+    },
+    {
+     "id": "art-0293",
+     "gold": "Center",
+     "predicted": "Left",
+     "p_gold": 0.135,
+     "confidence": "low",
+     "article_type": "opinion"
+    },
+    {
+     "id": "art-0294",
+     "gold": "Center",
+     "predicted": "Left",
+     "p_gold": 0.266,
+     "confidence": "low",
+     "article_type": "opinion"
+    },
+    {
+     "id": "art-0299",
+     "gold": "Right",
+     "predicted": "Left",
+     "p_gold": 0.035,
+     "confidence": "high",
+     "article_type": "opinion"
+    }
+   ],
+   "gender": [
+    {
+     "id": "art-0018",
+     "gold": "Misogynistic",
+     "predicted": "Neutral",
+     "p_gold": 0.008,
+     "confidence": "high",
+     "article_type": "wire"
+    },
+    {
+     "id": "art-0113",
+     "gold": "Neutral",
+     "predicted": "Misogynistic",
+     "p_gold": 0.022,
+     "confidence": "high",
+     "article_type": "news"
+    },
+    {
+     "id": "art-0120",
+     "gold": "Neutral",
+     "predicted": "Misogynistic",
+     "p_gold": 0.349,
+     "confidence": "high",
+     "article_type": "opinion"
+    },
+    {
+     "id": "art-0208",
+     "gold": "Misogynistic",
+     "predicted": "Neutral",
+     "p_gold": 0.069,
+     "confidence": "medium",
+     "article_type": "news"
+    },
+    {
+     "id": "art-0209",
+     "gold": "Misogynistic",
+     "predicted": "Neutral",
+     "p_gold": 0.024,
+     "confidence": "high",
+     "article_type": "analysis"
+    },
+    {
+     "id": "art-0211",
+     "gold": "Misandrist",
+     "predicted": "Misogynistic",
+     "p_gold": 0.012,
+     "confidence": "high",
+     "article_type": "news"
+    },
+    {
+     "id": "art-0214",
+     "gold": "Misandrist",
+     "predicted": "Neutral",
+     "p_gold": 0.298,
+     "confidence": "medium",
+     "article_type": "analysis"
+    },
+    {
+     "id": "art-0215",
+     "gold": "Misandrist",
+     "predicted": "Neutral",
+     "p_gold": 0.269,
+     "confidence": "medium",
+     "article_type": "opinion"
+    },
+    {
+     "id": "art-0224",
+     "gold": "Misandrist",
+     "predicted": "Neutral",
+     "p_gold": 0.277,
+     "confidence": "low",
+     "article_type": "news"
+    },
+    {
+     "id": "art-0225",
+     "gold": "Misandrist",
+     "predicted": "Neutral",
+     "p_gold": 0.413,
+     "confidence": "low",
+     "article_type": "news"
+    },
+    {
+     "id": "art-0228",
+     "gold": "Neutral",
+     "predicted": "Misandrist",
+     "p_gold": 0.05,
+     "confidence": "high",
+     "article_type": "opinion"
+    },
+    {
+     "id": "art-0239",
+     "gold": "Neutral",
+     "predicted": "Misandrist",
+     "p_gold": 0.003,
+     "confidence": "high",
+     "article_type": "opinion"
+    },
+    {
+     "id": "art-0243",
+     "gold": "Neutral",
+     "predicted": "Misandrist",
+     "p_gold": 0.204,
+     "confidence": "high",
+     "article_type": "opinion"
+    },
+    {
+     "id": "art-0257",
+     "gold": "Misandrist",
+     "predicted": "Neutral",
+     "p_gold": 0.026,
+     "confidence": "medium",
+     "article_type": "opinion"
+    },
+    {
+     "id": "art-0266",
+     "gold": "Misandrist",
+     "predicted": "Neutral",
+     "p_gold": 0.02,
+     "confidence": "high",
+     "article_type": "analysis"
+    },
+    {
+     "id": "art-0267",
+     "gold": "Neutral",
+     "predicted": "Misogynistic",
+     "p_gold": 0.021,
+     "confidence": "high",
+     "article_type": "news"
+    },
+    {
+     "id": "art-0268",
+     "gold": "Misandrist",
+     "predicted": "Neutral",
+     "p_gold": 0.04,
+     "confidence": "low",
+     "article_type": "analysis"
+    },
+    {
+     "id": "art-0274",
+     "gold": "Misandrist",
+     "predicted": "Neutral",
+     "p_gold": 0.319,
+     "confidence": "low",
+     "article_type": "opinion"
+    },
+    {
+     "id": "art-0293",
+     "gold": "Misandrist",
+     "predicted": "Neutral",
+     "p_gold": 0.453,
+     "confidence": "high",
+     "article_type": "opinion"
+    }
+   ]
+  },
+  "direction_errors": [
+   "art-0037",
+   "art-0071",
+   "art-0075",
+   "art-0077",
+   "art-0132",
+   "art-0174",
+   "art-0197",
+   "art-0289",
+   "art-0299"
+  ]
  },
  "temperatures": {
   "political": 1.74350451699954,

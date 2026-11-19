@@ -86,6 +86,23 @@ These look for signs that the model learned something other than framing.
 - gender / Misandrist: men, women, men are, male, all men, all, do, are, be, masculinity, because, my
 - gender / Neutral: congress, its, his, over, minister, opposition, bjp, india, to the, cm, party, to
 
+## Where the errors are
+
+**By annotator confidence.** Recall on biased rows (Left/Right, Misogynistic/Misandrist), split by the confidence the annotator gave the label. If the model misses mostly low-confidence rows, much of the error is in cases the annotator also found borderline.
+
+| Axis | Annotator confidence | Recall on biased rows | Accuracy on all rows |
+|---|---:|---:|---:|
+| political | high | 57.7 (15/26) | 81.3 (87/107) |
+| political | medium | 33.3 (11/33) | 48.0 (24/50) |
+| political | low | 16.7 (1/6) | 12.5 (1/8) |
+| gender | high | 78.3 (18/23) | 92.7 (139/150) |
+| gender | medium | 55.6 (5/9) | 63.6 (7/11) |
+| gender | low | 0.0 (0/4) | 0.0 (0/4) |
+
+**Direction errors.** 9 political row(s) were predicted on the opposite side (Left as Right or Right as Left): art-0037, art-0071, art-0075, art-0077, art-0132, art-0174, art-0197, art-0289, art-0299. These are worse than calling a biased row Center: the model saw partisan framing but read its direction wrongly.
+
+Every misclassified row is listed by id in `metrics.json` under `diagnostics.errors`. To read them with their text from your local copy of the dataset: `python -m newsbias.errors base`.
+
 ## Calibration
 
 A single temperature per axis fitted on these out-of-fold logits. The final model applies it, so the confidence the platform shows is closer to the real hit rate. ECE is the gap between confidence and accuracy (lower is better).
