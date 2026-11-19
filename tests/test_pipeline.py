@@ -87,3 +87,25 @@ def test_error_listing(cv_run, tiny_config, capsys):
     out = capsys.readouterr().out
     assert f"gender: {n_wrong} error(s)" in out
     assert "## Where the errors are" in (cv_run / "t" / "report.md").read_text()
+
+
+def test_compare_identical_runs(cv_run, tmp_path):
+    import shutil
+    from newsbias import compare
+    shutil.copytree(cv_run / "t", cv_run / "t2")
+    out = tmp_path / "cmp.md"
+    compare.main([str(cv_run / "t"), str(cv_run / "t2"), "--out", str(out), "--bootstrap", "50"])
+    runs = [compare.load_run(str(cv_run / n)) for n in ("t", "t2")]
+    res = compare.compare(runs, n_boot=50)
+    for axis in AXES:
+        v = res[axis]["vs_reference"]["t2"]
+        assert v["only_reference"] == v["only_this"] == 0 and v["mcnemar_p"] == 1.0
+        assert all(s["diff"] == 0 and s["ci"] == [0.0, 0.0] for s in v["stats"].values())
+    assert "minus t" in out.read_text()
+
+
+def test_mcnemar():
+    from newsbias.compare import mcnemar_p
+    assert mcnemar_p(0, 0) == 1.0
+    assert abs(mcnemar_p(0, 6) - 2 / 64) < 1e-12
+    assert mcnemar_p(9, 9) == 1.0
