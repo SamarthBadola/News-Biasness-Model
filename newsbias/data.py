@@ -56,7 +56,9 @@ def read_jsonl(path):
 
 
 def file_sha256(path):
-    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+    """SHA-256 of the file with line endings normalised, so a Windows checkout (CRLF) and a Linux one (LF) of the
+    same data give the same fingerprint."""
+    return hashlib.sha256(Path(path).read_bytes().replace(b"\r\n", b"\n")).hexdigest()
 
 
 def check_rows(rows):
