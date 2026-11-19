@@ -221,3 +221,12 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# --- project ---
+# Trained models are ~1.1 GB each; share them outside git (see README).
+models/
+# Never commit article text from the dataset repo.
+data/
+# Smoke-test runs are throwaway.
+results/smoke*/
+*.tmp

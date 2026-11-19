@@ -1,0 +1,47 @@
+# Party, leader and organisation names that the training augmentation may replace with a role phrase.
+#
+# Why: the guideline defines Left and Right by framing towards the national ruling party and the opposition, so
+# *which side* a sentence is about matters but *which person* it names should not. Swapping "Rahul Gandhi" for
+# "an opposition leader" during training (some of the time, at random) pushes the model to learn the framing
+# instead of memorising names, and lets it handle leaders it never saw in the 165 rows.
+#
+# The sides reflect national alliances as of mid-2026. Review this file when alliances change. Leave out names
+# that are also ordinary words or other people's names (bare "Shah", "Rahul", "Gandhi", "SP", "CPI").
+# Matching is case-sensitive and on whole words; the longest name wins, so "Shiv Sena (UBT)" beats "Shiv Sena".
+
+[[group]]
+side = "ruling"
+replacement = "the ruling party"
+names = ["BJP", "Bharatiya Janata Party", "NDA", "National Democratic Alliance", "JD(U)", "Janata Dal (United)",
+         "TDP", "Telugu Desam Party", "Shiv Sena", "LJP (Ram Vilas)", "NCP"]
+
+[[group]]
+side = "ruling"
+replacement = "a ruling-party leader"
+names = ["Narendra Modi", "PM Modi", "Modi", "Amit Shah", "Rajnath Singh", "J P Nadda", "JP Nadda", "Nadda",
+         "Yogi Adityanath", "Adityanath", "Himanta Biswa Sarma", "Nirmala Sitharaman", "Sitharaman", "Piyush Goyal",
+         "S Jaishankar", "Jaishankar", "Devendra Fadnavis", "Fadnavis", "Nitin Gadkari", "Gadkari",
+         "Shivraj Singh Chouhan", "Kiren Rijiju", "Ashwini Vaishnaw", "Dharmendra Pradhan", "Smriti Irani",
+         "Anurag Thakur", "Nitish Kumar", "Chandrababu Naidu", "Eknath Shinde", "Ajit Pawar", "Amit Malviya"]
+
+[[group]]
+side = "ruling"
+replacement = "a ruling-side organisation"
+names = ["RSS", "Rashtriya Swayamsevak Sangh", "VHP", "Vishwa Hindu Parishad", "Bajrang Dal", "ABVP",
+         "Mohan Bhagwat"]
+
+[[group]]
+side = "opposition"
+replacement = "an opposition party"
+names = ["Congress", "INC", "Indian National Congress", "AAP", "Aam Aadmi Party", "TMC", "Trinamool Congress",
+         "Trinamool", "Samajwadi Party", "DMK", "RJD", "CPI(M)", "CPI-M", "Shiv Sena (UBT)",
+         "NCP (SP)", "NCP(SP)", "JMM", "AIMIM", "INDIA bloc", "BSP", "Left Front"]
+
+[[group]]
+side = "opposition"
+replacement = "an opposition leader"
+names = ["Rahul Gandhi", "Sonia Gandhi", "Priyanka Gandhi Vadra", "Priyanka Gandhi", "Mallikarjun Kharge", "Kharge",
+         "Arvind Kejriwal", "Kejriwal", "Mamata Banerjee", "Abhishek Banerjee", "Akhilesh Yadav", "M K Stalin",
+         "MK Stalin", "Tejashwi Yadav", "Asaduddin Owaisi", "Owaisi", "Uddhav Thackeray", "Sharad Pawar",
+         "Mayawati", "Jairam Ramesh", "Pawan Khera", "Shashi Tharoor", "Hemant Soren", "Siddaramaiah",
+         "Revanth Reddy", "Supriya Sule", "Sanjay Raut"]

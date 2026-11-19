@@ -1,0 +1,5 @@
+# Ablation: the base config without role masking and without Neutral gender swaps.
+# Compare its report with the base run to see what the two augmentations do.
+extends = "base.toml"
+role_mask_p = 0.0
+gender_swap_neutral = false

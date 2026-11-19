@@ -1,0 +1,424 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "News bias classifier",
+    "description": "Political and gender bias labels for the headline and lede of a news article.",
+    "version": "1"
+  },
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Health",
+        "operationId": "health_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Health"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/classify": {
+      "post": {
+        "summary": "Classify",
+        "operationId": "classify_v1_classify_post",
+        "parameters": [
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Api-Key"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClassifyRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClassifyResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unauthorized"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unprocessable Content"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ClassifyRequest": {
+        "properties": {
+          "headline": {
+            "type": "string",
+            "maxLength": 1000,
+            "minLength": 1,
+            "title": "Headline",
+            "description": "The article headline as published."
+          },
+          "body": {
+            "type": "string",
+            "maxLength": 200000,
+            "minLength": 1,
+            "title": "Body",
+            "description": "The full article body as extracted by the page fetcher, one paragraph per line (paragraphs separated by newlines). Bylines, datelines and boilerplate may be left in: the service removes them with the same rule the dataset used."
+          },
+          "explain": {
+            "type": "boolean",
+            "title": "Explain",
+            "description": "Compute highlighted phrases for biased labels (never for Center or Neutral). Set false when only labels are needed; it saves several seconds on a CPU host.",
+            "default": true
+          },
+          "request_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 100
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Request Id",
+            "description": "Echoed back, for logs."
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "headline",
+          "body"
+        ],
+        "title": "ClassifyRequest"
+      },
+      "ClassifyResponse": {
+        "properties": {
+          "api_version": {
+            "type": "string",
+            "title": "Api Version",
+            "default": "1"
+          },
+          "model_version": {
+            "type": "string",
+            "title": "Model Version"
+          },
+          "request_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Request Id"
+          },
+          "input": {
+            "$ref": "#/components/schemas/ModelInput"
+          },
+          "political": {
+            "$ref": "#/components/schemas/PoliticalResult"
+          },
+          "gender": {
+            "$ref": "#/components/schemas/GenderResult"
+          }
+        },
+        "type": "object",
+        "required": [
+          "model_version",
+          "input",
+          "political",
+          "gender"
+        ],
+        "title": "ClassifyResponse"
+      },
+      "ErrorResponse": {
+        "properties": {
+          "detail": {
+            "type": "string",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "required": [
+          "detail"
+        ],
+        "title": "ErrorResponse"
+      },
+      "GenderResult": {
+        "properties": {
+          "label": {
+            "type": "string",
+            "enum": [
+              "Misogynistic",
+              "Misandrist",
+              "Neutral"
+            ],
+            "title": "Label"
+          },
+          "confidence": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Confidence",
+            "description": "Calibrated probability of the label."
+          },
+          "probabilities": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "propertyNames": {
+              "enum": [
+                "Misogynistic",
+                "Misandrist",
+                "Neutral"
+              ]
+            },
+            "type": "object",
+            "title": "Probabilities"
+          },
+          "highlights": {
+            "items": {
+              "$ref": "#/components/schemas/Highlight"
+            },
+            "type": "array",
+            "title": "Highlights",
+            "description": "Phrases that pushed the model towards the label, strongest first. Empty for Neutral, or when explain is false."
+          }
+        },
+        "type": "object",
+        "required": [
+          "label",
+          "confidence",
+          "probabilities",
+          "highlights"
+        ],
+        "title": "GenderResult"
+      },
+      "Health": {
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "ok",
+              "loading",
+              "error"
+            ],
+            "title": "Status"
+          },
+          "model_version": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Model Version"
+          },
+          "api_version": {
+            "type": "string",
+            "title": "Api Version",
+            "default": "1"
+          }
+        },
+        "type": "object",
+        "required": [
+          "status"
+        ],
+        "title": "Health"
+      },
+      "Highlight": {
+        "properties": {
+          "field": {
+            "type": "string",
+            "enum": [
+              "headline",
+              "lede"
+            ],
+            "title": "Field",
+            "description": "Which echoed string the offsets refer to."
+          },
+          "start": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Start",
+            "description": "Start character offset in that string."
+          },
+          "end": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "End",
+            "description": "End character offset (exclusive)."
+          },
+          "text": {
+            "type": "string",
+            "title": "Text",
+            "description": "The highlighted phrase, equal to string[start:end]."
+          },
+          "weight": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Weight",
+            "description": "Share of the positive evidence for the predicted label that this phrase carries (Integrated Gradients)."
+          }
+        },
+        "type": "object",
+        "required": [
+          "field",
+          "start",
+          "end",
+          "text",
+          "weight"
+        ],
+        "title": "Highlight"
+      },
+      "ModelInput": {
+        "properties": {
+          "headline": {
+            "type": "string",
+            "title": "Headline",
+            "description": "Headline after whitespace normalisation."
+          },
+          "lede": {
+            "type": "string",
+            "title": "Lede",
+            "description": "The lede the model read: first two body paragraphs after boilerplate and dateline removal, cut to 120 words."
+          },
+          "lede_words": {
+            "type": "integer",
+            "title": "Lede Words"
+          },
+          "truncated": {
+            "type": "boolean",
+            "title": "Truncated",
+            "description": "True if headline plus lede exceeded the model's token limit."
+          },
+          "scope": {
+            "type": "string",
+            "const": "headline+lede",
+            "title": "Scope",
+            "description": "What the labels describe.",
+            "default": "headline+lede"
+          }
+        },
+        "type": "object",
+        "required": [
+          "headline",
+          "lede",
+          "lede_words",
+          "truncated"
+        ],
+        "title": "ModelInput"
+      },
+      "PoliticalResult": {
+        "properties": {
+          "label": {
+            "type": "string",
+            "enum": [
+              "Left",
+              "Center",
+              "Right"
+            ],
+            "title": "Label"
+          },
+          "confidence": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Confidence",
+            "description": "Calibrated probability of the label."
+          },
+          "probabilities": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "propertyNames": {
+              "enum": [
+                "Left",
+                "Center",
+                "Right"
+              ]
+            },
+            "type": "object",
+            "title": "Probabilities"
+          },
+          "highlights": {
+            "items": {
+              "$ref": "#/components/schemas/Highlight"
+            },
+            "type": "array",
+            "title": "Highlights",
+            "description": "Phrases that pushed the model towards the label, strongest first. Empty for Center, or when explain is false."
+          }
+        },
+        "type": "object",
+        "required": [
+          "label",
+          "confidence",
+          "probabilities",
+          "highlights"
+        ],
+        "title": "PoliticalResult"
+      }
+    }
+  }
+}

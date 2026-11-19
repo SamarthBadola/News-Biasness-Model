@@ -1,0 +1,4 @@
+# Ablation: the base config with plain (unweighted) cross-entropy.
+# Compare per-class recall with the base run to see what class weighting buys.
+extends = "base.toml"
+class_weight_power = 0.0

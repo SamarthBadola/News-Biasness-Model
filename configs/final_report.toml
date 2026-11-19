@@ -1,0 +1,4 @@
+# The base config with three training seeds and the highlight check, for the numbers that go in the report.
+extends = "base.toml"
+seeds = [13, 21, 42]
+explain_eval = true

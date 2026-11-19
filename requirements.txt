@@ -1,0 +1,12 @@
+# Tested with Python 3.13, torch 2.15, transformers 5.23, scikit-learn 1.9, fastapi 0.165.
+# Windows: plain `pip install -r requirements.txt` gets the CPU build of torch.
+# Linux without a GPU: install torch first from the CPU index to skip ~3 GB of CUDA libraries:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+torch>=2.4
+transformers>=5.0,<6
+tokenizers>=0.20
+scikit-learn>=1.4
+numpy>=1.26
+fastapi>=0.110
+pydantic>=2.6
+uvicorn>=0.29

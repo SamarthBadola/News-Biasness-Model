@@ -1,0 +1,41 @@
+# Main configuration. Every value is fixed before cross-validation and is not tuned on held-out folds.
+# Comments say why each value is what it is.
+
+# Path to the dataset repo's annotated file, relative to this repo's folder.
+data_path = "../news-bias-dataset/data/annotated/art_A1.jsonl"
+
+model_name = "ai4bharat/IndicBERTv2-MLM-only"
+max_length = 256            # headline + 120-word lede is under 200 tokens; prepare.py prints the real lengths
+head_dropout = 0.2          # dropout on the pooled vector, on top of the encoder's own 0.1
+freeze_embeddings = true    # 192M of the 278M parameters; freezing them regularises and speeds up CPU training
+freeze_layers = 0           # lowest encoder layers to freeze as well (try 4 if training is too slow)
+
+epochs = 8
+batch_size = 8
+lr = 3e-5                   # top encoder layer
+head_lr = 1e-3              # the new classification heads start from scratch
+layer_decay = 0.9           # each lower layer learns 0.9x as fast as the one above it
+weight_decay = 0.01
+warmup_ratio = 0.1
+grad_clip = 1.0
+loss_weights = { political = 1.0, gender = 1.0 }
+
+class_weight_power = 1.0    # 1 = fully balanced classes, 0.5 = square-root, 0 = no weighting
+confidence_weighting = false
+
+role_mask_p = 0.5           # chance each party/leader name is replaced by its role during training
+gender_swap_neutral = true  # add gender-swapped copies of Neutral rows (label stays Neutral)
+
+folds = 5
+fold_seed = 13              # same folds for every run, so runs are comparable
+seeds = [13]                # training seeds; use [13, 21, 42] for the final reported numbers
+group_threshold = 0.5       # TF-IDF cosine above which two rows count as the same story
+bootstrap = 1000
+explain_eval = false        # compare highlights with annotator spans (adds a few minutes per fold)
+
+ig_steps = 16
+top_phrases = 5
+
+cpu_bf16 = false            # bfloat16 autocast on CPU; often ~1.5-2x faster on recent Ryzen chips
+threads = 0                 # 0 = half the logical cores (the physical cores)
+eval_batch_size = 16
