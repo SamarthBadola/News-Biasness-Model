@@ -1,0 +1,64 @@
+data: ../news-bias-dataset/data/annotated/art_A1.jsonl
+rows: 165
+political: Left 37, Center 100, Right 28
+gender: Misogynistic 18, Misandrist 18, Neutral 129
+political x gender: Center/Misandrist 10, Center/Misogynistic 18, Center/Neutral 72, Left/Misandrist 8, Left/Neutral 29, Right/Neutral 28
+rows with an outlet or agency name masked: 11
+folds: [32, 34, 33, 33, 33], near-duplicate pairs kept together: 0
+baselines done
+seed 13 fold 0: train 133, test 32
+  training on 133 items (133 rows), 85.1M trainable parameters, 136 steps, class weights political: Left 1.48, Center 0.55, Right 1.93; gender: Misogynistic 3.17, Misandrist 2.96, Neutral 0.43
+  epoch 1/8  seconds 53.8  loss_political 1.1006  loss_gender 1.1046
+  epoch 2/8  seconds 52.7  loss_political 1.0541  loss_gender 0.9489
+  epoch 3/8  seconds 55.9  loss_political 0.8272  loss_gender 0.5665
+  epoch 4/8  seconds 55.9  loss_political 0.6005  loss_gender 0.2794
+  epoch 5/8  seconds 54.4  loss_political 0.4489  loss_gender 0.1667
+  epoch 6/8  seconds 54.4  loss_political 0.3665  loss_gender 0.1274
+  epoch 7/8  seconds 45.7  loss_political 0.2535  loss_gender 0.1003
+  epoch 8/8  seconds 45.2  loss_political 0.2246  loss_gender 0.0795
+seed 13 fold 0: done in 427s
+seed 13 fold 1: train 131, test 34
+  training on 131 items (131 rows), 85.1M trainable parameters, 136 steps, class weights political: Left 1.51, Center 0.55, Right 1.98; gender: Misogynistic 2.91, Misandrist 3.12, Neutral 0.43
+  epoch 1/8  seconds 43.9  loss_political 1.0927  loss_gender 1.1022
+  epoch 2/8  seconds 43.0  loss_political 1.0507  loss_gender 0.9569
+  epoch 3/8  seconds 43.0  loss_political 0.8213  loss_gender 0.6103
+  epoch 4/8  seconds 43.9  loss_political 0.5534  loss_gender 0.2582
+  epoch 5/8  seconds 52.7  loss_political 0.4311  loss_gender 0.1681
+  epoch 6/8  seconds 53.6  loss_political 0.2732  loss_gender 0.116
+  epoch 7/8  seconds 56.3  loss_political 0.2125  loss_gender 0.065
+  epoch 8/8  seconds 54.6  loss_political 0.1636  loss_gender 0.0571
+seed 13 fold 1: done in 400s
+seed 13 fold 2: train 132, test 33
+  training on 132 items (132 rows), 85.1M trainable parameters, 136 steps, class weights political: Left 1.47, Center 0.55, Right 2.00; gender: Misogynistic 3.14, Misandrist 2.93, Neutral 0.43
+  epoch 1/8  seconds 55.4  loss_political 1.1016  loss_gender 1.1
+  epoch 2/8  seconds 55.2  loss_political 1.0481  loss_gender 0.964
+  epoch 3/8  seconds 56.5  loss_political 0.8473  loss_gender 0.5377
+  epoch 4/8  seconds 55.4  loss_political 0.5884  loss_gender 0.208
+  epoch 5/8  seconds 54.7  loss_political 0.3743  loss_gender 0.1763
+  epoch 6/8  seconds 52.5  loss_political 0.2904  loss_gender 0.109
+  epoch 7/8  seconds 44.3  loss_political 0.2279  loss_gender 0.071
+  epoch 8/8  seconds 48.0  loss_political 0.1948  loss_gender 0.0527
+seed 13 fold 2: done in 430s
+seed 13 fold 3: train 132, test 33
+  training on 132 items (132 rows), 85.1M trainable parameters, 136 steps, class weights political: Left 1.47, Center 0.55, Right 2.00; gender: Misogynistic 2.93, Misandrist 3.14, Neutral 0.43
+  epoch 1/8  seconds 52.1  loss_political 1.1063  loss_gender 1.0998
+  epoch 2/8  seconds 52.6  loss_political 1.0517  loss_gender 0.9329
+  epoch 3/8  seconds 53.4  loss_political 0.9095  loss_gender 0.5115
+  epoch 4/8  seconds 52.2  loss_political 0.6091  loss_gender 0.2017
+  epoch 5/8  seconds 53.0  loss_political 0.4843  loss_gender 0.1208
+  epoch 6/8  seconds 52.8  loss_political 0.3488  loss_gender 0.0588
+  epoch 7/8  seconds 52.1  loss_political 0.2514  loss_gender 0.0484
+  epoch 8/8  seconds 52.6  loss_political 0.1983  loss_gender 0.0394
+seed 13 fold 3: done in 429s
+seed 13 fold 4: train 132, test 33
+  training on 132 items (132 rows), 85.1M trainable parameters, 136 steps, class weights political: Left 1.52, Center 0.55, Right 1.91; gender: Misogynistic 3.14, Misandrist 3.14, Neutral 0.42
+  epoch 1/8  seconds 52.3  loss_political 1.1009  loss_gender 1.1049
+  epoch 2/8  seconds 52.5  loss_political 1.0381  loss_gender 0.9864
+  epoch 3/8  seconds 53.2  loss_political 0.8172  loss_gender 0.5521
+  epoch 4/8  seconds 53.9  loss_political 0.544  loss_gender 0.2374
+  epoch 5/8  seconds 51.9  loss_political 0.3932  loss_gender 0.188
+  epoch 6/8  seconds 52.8  loss_political 0.2707  loss_gender 0.0931
+  epoch 7/8  seconds 53.1  loss_political 0.2078  loss_gender 0.0652
+  epoch 8/8  seconds 55.0  loss_political 0.1606  loss_gender 0.079
+seed 13 fold 4: done in 433s
+report written to C:\Users\SAMARTH\News-Biasness-Model\results\no-shortcut-controls\report.md

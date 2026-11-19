@@ -1,0 +1,37 @@
+{
+  "data_path": "../news-bias-dataset/data/annotated/art_A1.jsonl",
+  "model_name": "ai4bharat/IndicBERTv2-MLM-only",
+  "max_length": 256,
+  "head_dropout": 0.2,
+  "freeze_embeddings": true,
+  "freeze_layers": 0,
+  "epochs": 8,
+  "batch_size": 8,
+  "lr": 3e-05,
+  "head_lr": 0.001,
+  "layer_decay": 0.9,
+  "weight_decay": 0.01,
+  "warmup_ratio": 0.1,
+  "grad_clip": 1.0,
+  "loss_weights": {
+    "political": 1.0,
+    "gender": 1.0
+  },
+  "class_weight_power": 1.0,
+  "confidence_weighting": false,
+  "role_mask_p": 0.0,
+  "gender_swap_neutral": false,
+  "folds": 5,
+  "fold_seed": 13,
+  "seeds": [
+    13
+  ],
+  "group_threshold": 0.5,
+  "bootstrap": 1000,
+  "explain_eval": false,
+  "ig_steps": 16,
+  "top_phrases": 5,
+  "cpu_bf16": false,
+  "threads": 0,
+  "eval_batch_size": 16
+}

@@ -1,0 +1,1817 @@
+[
+ {
+  "id": "art-0001",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "NDTV",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0002",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "NDTV",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0003",
+  "political": "Right",
+  "gender": "Neutral",
+  "outlet": "NDTV",
+  "article_type": "news",
+  "confidence": {
+   "political": "low",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0004",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Hindustan Times",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0005",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "NDTV",
+  "article_type": "news",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0006",
+  "political": "Right",
+  "gender": "Neutral",
+  "outlet": "Hindustan Times",
+  "article_type": "news",
+  "confidence": {
+   "political": "low",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0009",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Hindustan Times",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0011",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "NDTV",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0014",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "NDTV",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0015",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Hindustan Times",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0017",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Indian Express",
+  "article_type": "analysis",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0018",
+  "political": "Center",
+  "gender": "Misogynistic",
+  "outlet": "India TV",
+  "article_type": "wire",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0019",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "The Hindu",
+  "article_type": "analysis",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0020",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "NDTV",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0021",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "The Hindu",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0022",
+  "political": "Left",
+  "gender": "Neutral",
+  "outlet": "Indian Express",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0026",
+  "political": "Left",
+  "gender": "Neutral",
+  "outlet": "News18",
+  "article_type": "news",
+  "confidence": {
+   "political": "low",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0027",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Times of India",
+  "article_type": "wire",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0028",
+  "political": "Right",
+  "gender": "Neutral",
+  "outlet": "Oneindia",
+  "article_type": "news",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0029",
+  "political": "Right",
+  "gender": "Neutral",
+  "outlet": "TFIPOST",
+  "article_type": "news",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0031",
+  "political": "Left",
+  "gender": "Neutral",
+  "outlet": "Oneindia",
+  "article_type": "news",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0032",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Indian Express",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0033",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Hindustan Times",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0034",
+  "political": "Left",
+  "gender": "Neutral",
+  "outlet": "The Quint",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0035",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Times of India",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0036",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Indian Express",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "medium"
+  }
+ },
+ {
+  "id": "art-0037",
+  "political": "Left",
+  "gender": "Neutral",
+  "outlet": "Frontline",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0038",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Times of India",
+  "article_type": "news",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0039",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "DNA India",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0042",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Organiser",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0045",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Organiser",
+  "article_type": "analysis",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0048",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Indian Express",
+  "article_type": "analysis",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0049",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Times of India",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0051",
+  "political": "Left",
+  "gender": "Neutral",
+  "outlet": "Frontline",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0052",
+  "political": "Left",
+  "gender": "Neutral",
+  "outlet": "Frontline",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0053",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Hindustan Times",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0054",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "India TV",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0055",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Firstpost",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0057",
+  "political": "Right",
+  "gender": "Neutral",
+  "outlet": "The Hindu",
+  "article_type": "news",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0058",
+  "political": "Left",
+  "gender": "Neutral",
+  "outlet": "The Quint",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0060",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "The Hindu",
+  "article_type": "analysis",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0063",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Firstpost",
+  "article_type": "analysis",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0064",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Hindustan Times",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0066",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "The Hindu",
+  "article_type": "analysis",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0068",
+  "political": "Right",
+  "gender": "Neutral",
+  "outlet": "Firstpost",
+  "article_type": "analysis",
+  "confidence": {
+   "political": "low",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0069",
+  "political": "Right",
+  "gender": "Neutral",
+  "outlet": "News18",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0071",
+  "political": "Left",
+  "gender": "Neutral",
+  "outlet": "Times Now",
+  "article_type": "news",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0074",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Oneindia",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0075",
+  "political": "Right",
+  "gender": "Neutral",
+  "outlet": "News18",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0077",
+  "political": "Left",
+  "gender": "Neutral",
+  "outlet": "The Quint",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0078",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Frontline",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0084",
+  "political": "Right",
+  "gender": "Neutral",
+  "outlet": "National Herald",
+  "article_type": "news",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0086",
+  "political": "Right",
+  "gender": "Neutral",
+  "outlet": "Times Now",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0088",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "ABP News",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0090",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "TFIPOST",
+  "article_type": "analysis",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0091",
+  "political": "Left",
+  "gender": "Neutral",
+  "outlet": "Frontline",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0093",
+  "political": "Right",
+  "gender": "Neutral",
+  "outlet": "TFIPOST",
+  "article_type": "analysis",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0094",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "DNA India",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0098",
+  "political": "Right",
+  "gender": "Neutral",
+  "outlet": "OpIndia",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0099",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "OpIndia",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0100",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Scroll",
+  "article_type": "analysis",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0101",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Scroll",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0102",
+  "political": "Right",
+  "gender": "Neutral",
+  "outlet": "OpIndia",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0103",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Times Now",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0104",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Times Now",
+  "article_type": "wire",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0108",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "India TV",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0112",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Scroll",
+  "article_type": "analysis",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0113",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Free Press Journal",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0114",
+  "political": "Right",
+  "gender": "Neutral",
+  "outlet": "TFIPOST",
+  "article_type": "news",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0116",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Organiser",
+  "article_type": "wire",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0119",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "OpIndia",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0120",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Organiser",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0122",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "DNA India",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0123",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Free Press Journal",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0125",
+  "political": "Right",
+  "gender": "Neutral",
+  "outlet": "TFIPOST",
+  "article_type": "news",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0126",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Business Standard",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0129",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "OpIndia",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0132",
+  "political": "Right",
+  "gender": "Neutral",
+  "outlet": "News18",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0143",
+  "political": "Left",
+  "gender": "Neutral",
+  "outlet": "Scroll",
+  "article_type": "news",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0152",
+  "political": "Left",
+  "gender": "Neutral",
+  "outlet": "The Quint",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0155",
+  "political": "Left",
+  "gender": "Neutral",
+  "outlet": "Frontline",
+  "article_type": "analysis",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0160",
+  "political": "Right",
+  "gender": "Neutral",
+  "outlet": "Organiser",
+  "article_type": "news",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0163",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Hindustan Times",
+  "article_type": "news",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0164",
+  "political": "Right",
+  "gender": "Neutral",
+  "outlet": "Times Now",
+  "article_type": "news",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0166",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Indian Express",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0170",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "TFIPOST",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0171",
+  "political": "Left",
+  "gender": "Neutral",
+  "outlet": "Indian Express",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0172",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "India Today",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0174",
+  "political": "Left",
+  "gender": "Neutral",
+  "outlet": "Times of India",
+  "article_type": "news",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0176",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Hindustan Times",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0179",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "The Hindu",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0183",
+  "political": "Left",
+  "gender": "Neutral",
+  "outlet": "Indian Express",
+  "article_type": "analysis",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0185",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Hindustan Times",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0188",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Organiser",
+  "article_type": "news",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0189",
+  "political": "Left",
+  "gender": "Neutral",
+  "outlet": "Frontline",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0197",
+  "political": "Left",
+  "gender": "Neutral",
+  "outlet": "News18",
+  "article_type": "news",
+  "confidence": {
+   "political": "low",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0200",
+  "political": "Left",
+  "gender": "Neutral",
+  "outlet": "Scroll",
+  "article_type": "news",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0202",
+  "political": "Left",
+  "gender": "Neutral",
+  "outlet": "National Herald",
+  "article_type": "news",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0205",
+  "political": "Right",
+  "gender": "Neutral",
+  "outlet": "Indian Express",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0206",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Hindustan Times",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0207",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Indian Express",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0208",
+  "political": "Center",
+  "gender": "Misogynistic",
+  "outlet": "Times of India",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "medium"
+  }
+ },
+ {
+  "id": "art-0209",
+  "political": "Center",
+  "gender": "Misogynistic",
+  "outlet": "India Today",
+  "article_type": "analysis",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0210",
+  "political": "Left",
+  "gender": "Neutral",
+  "outlet": "Oneindia",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0211",
+  "political": "Center",
+  "gender": "Misandrist",
+  "outlet": "Republic",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0212",
+  "political": "Center",
+  "gender": "Misogynistic",
+  "outlet": "Times of India",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "medium"
+  }
+ },
+ {
+  "id": "art-0213",
+  "political": "Center",
+  "gender": "Misogynistic",
+  "outlet": "Times of India",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0214",
+  "political": "Left",
+  "gender": "Misandrist",
+  "outlet": "Indian Express",
+  "article_type": "analysis",
+  "confidence": {
+   "political": "medium",
+   "gender": "medium"
+  }
+ },
+ {
+  "id": "art-0215",
+  "political": "Left",
+  "gender": "Misandrist",
+  "outlet": "Indian Express",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "high",
+   "gender": "medium"
+  }
+ },
+ {
+  "id": "art-0216",
+  "political": "Center",
+  "gender": "Misogynistic",
+  "outlet": "Oneindia",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "medium"
+  }
+ },
+ {
+  "id": "art-0217",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Hindustan Times",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0218",
+  "political": "Center",
+  "gender": "Misandrist",
+  "outlet": "Times of India",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0219",
+  "political": "Center",
+  "gender": "Misogynistic",
+  "outlet": "India Today",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0220",
+  "political": "Center",
+  "gender": "Misogynistic",
+  "outlet": "Oneindia",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0221",
+  "political": "Center",
+  "gender": "Misogynistic",
+  "outlet": "Times of India",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0222",
+  "political": "Center",
+  "gender": "Misogynistic",
+  "outlet": "India Today",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "medium"
+  }
+ },
+ {
+  "id": "art-0223",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Oneindia",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0224",
+  "political": "Center",
+  "gender": "Misandrist",
+  "outlet": "Times of India",
+  "article_type": "news",
+  "confidence": {
+   "political": "medium",
+   "gender": "low"
+  }
+ },
+ {
+  "id": "art-0225",
+  "political": "Center",
+  "gender": "Misandrist",
+  "outlet": "India Today",
+  "article_type": "news",
+  "confidence": {
+   "political": "medium",
+   "gender": "low"
+  }
+ },
+ {
+  "id": "art-0227",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Deutsche Welle",
+  "article_type": "analysis",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0228",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Hindustan Times",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0231",
+  "political": "Left",
+  "gender": "Neutral",
+  "outlet": "The Diplomat",
+  "article_type": "analysis",
+  "confidence": {
+   "political": "high",
+   "gender": "medium"
+  }
+ },
+ {
+  "id": "art-0232",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Indian Express",
+  "article_type": "analysis",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0234",
+  "political": "Left",
+  "gender": "Neutral",
+  "outlet": "Indian Express",
+  "article_type": "analysis",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0236",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Moneycontrol",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0238",
+  "political": "Center",
+  "gender": "Misandrist",
+  "outlet": "Scroll",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "medium",
+   "gender": "medium"
+  }
+ },
+ {
+  "id": "art-0239",
+  "political": "Left",
+  "gender": "Neutral",
+  "outlet": "Hindustan Times",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0240",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "The New Indian Express",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0243",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "The Quint",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0244",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "LiveLaw",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0247",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Indian Express",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0249",
+  "political": "Left",
+  "gender": "Neutral",
+  "outlet": "The Wire Mobile",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0252",
+  "political": "Left",
+  "gender": "Neutral",
+  "outlet": "Indian Express",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0257",
+  "political": "Left",
+  "gender": "Misandrist",
+  "outlet": "Scroll",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "high",
+   "gender": "medium"
+  }
+ },
+ {
+  "id": "art-0259",
+  "political": "Left",
+  "gender": "Misandrist",
+  "outlet": "Times of India",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "low",
+   "gender": "medium"
+  }
+ },
+ {
+  "id": "art-0262",
+  "political": "Left",
+  "gender": "Neutral",
+  "outlet": "Indian Express",
+  "article_type": "news",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0266",
+  "political": "Left",
+  "gender": "Misandrist",
+  "outlet": "Feminism in India",
+  "article_type": "analysis",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0267",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Indian Express",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0268",
+  "political": "Left",
+  "gender": "Misandrist",
+  "outlet": "The Week",
+  "article_type": "analysis",
+  "confidence": {
+   "political": "medium",
+   "gender": "low"
+  }
+ },
+ {
+  "id": "art-0271",
+  "political": "Left",
+  "gender": "Neutral",
+  "outlet": "NDTV Profit",
+  "article_type": "analysis",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0274",
+  "political": "Left",
+  "gender": "Misandrist",
+  "outlet": "Indian Express",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "medium",
+   "gender": "low"
+  }
+ },
+ {
+  "id": "art-0275",
+  "political": "Center",
+  "gender": "Neutral",
+  "outlet": "Indian Express",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0276",
+  "political": "Right",
+  "gender": "Neutral",
+  "outlet": "The Wire Mobile",
+  "article_type": "news",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0278",
+  "political": "Center",
+  "gender": "Misogynistic",
+  "outlet": "Times of India",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0279",
+  "political": "Center",
+  "gender": "Misogynistic",
+  "outlet": "Times of India",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0280",
+  "political": "Center",
+  "gender": "Misogynistic",
+  "outlet": "India Today",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0281",
+  "political": "Center",
+  "gender": "Misogynistic",
+  "outlet": "Free Press Journal",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0282",
+  "political": "Center",
+  "gender": "Misogynistic",
+  "outlet": "Free Press Journal",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0283",
+  "political": "Center",
+  "gender": "Misogynistic",
+  "outlet": "Free Press Journal",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0284",
+  "political": "Center",
+  "gender": "Misogynistic",
+  "outlet": "Free Press Journal",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0285",
+  "political": "Center",
+  "gender": "Misogynistic",
+  "outlet": "Indian Express",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0286",
+  "political": "Center",
+  "gender": "Misandrist",
+  "outlet": "ThePrint",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0287",
+  "political": "Left",
+  "gender": "Misandrist",
+  "outlet": "ThePrint",
+  "article_type": "news",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0288",
+  "political": "Right",
+  "gender": "Neutral",
+  "outlet": "OpIndia",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0289",
+  "political": "Right",
+  "gender": "Neutral",
+  "outlet": "OpIndia",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0290",
+  "political": "Right",
+  "gender": "Neutral",
+  "outlet": "OpIndia",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0291",
+  "political": "Right",
+  "gender": "Neutral",
+  "outlet": "Organiser",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0292",
+  "political": "Center",
+  "gender": "Misandrist",
+  "outlet": "Telegraph India",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0293",
+  "political": "Center",
+  "gender": "Misandrist",
+  "outlet": "ThePrint",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "low",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0294",
+  "political": "Center",
+  "gender": "Misandrist",
+  "outlet": "The Tribune",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "low",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0295",
+  "political": "Center",
+  "gender": "Misandrist",
+  "outlet": "NDTV",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "medium",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0296",
+  "political": "Right",
+  "gender": "Neutral",
+  "outlet": "Organiser",
+  "article_type": "news",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0297",
+  "political": "Right",
+  "gender": "Neutral",
+  "outlet": "Organiser",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0298",
+  "political": "Right",
+  "gender": "Neutral",
+  "outlet": "Organiser",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ },
+ {
+  "id": "art-0299",
+  "political": "Right",
+  "gender": "Neutral",
+  "outlet": "OpIndia",
+  "article_type": "opinion",
+  "confidence": {
+   "political": "high",
+   "gender": "high"
+  }
+ }
+]
