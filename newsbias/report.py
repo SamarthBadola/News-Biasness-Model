@@ -12,7 +12,7 @@ from pathlib import Path
 
 import numpy as np
 
-from .labels import AXES, label_index
+from .labels import AXES, NEUTRAL, label_index
 from .metrics import ece, evaluate_axis, fit_temperature, nll, overlap_f1, word_set
 from .train import softmax
 
@@ -109,7 +109,8 @@ def build(run_dir, n_boot=None):
     metrics["primary"] = metrics["seeds"][str(primary)]
 
     # name-masked diagnostic, calibration, per article type, outlet check, baselines
-    diag = {"role_masked": {}, "calibration": {}, "article_type": {}, "outlet_majority": {}, "baselines": {}}
+    diag = {"role_masked": {}, "calibration": {}, "article_type": {}, "outlet_majority": {}, "baselines": {},
+            "confidence": {}, "errors": {}}
     base_idx = {i: n for n, i in enumerate(base["ids"])}
     for axis in AXES:
         y = truth(ids, axis)
@@ -133,6 +134,24 @@ def build(run_dir, n_boot=None):
             diag["baselines"].setdefault(name, {})[axis] = evaluate_axis(axis, y, bpred, 0)
             if name == "tfidf_logreg":
                 diag["outlet_majority"][axis][name] = outlet_majority_check(rows, axis, dict(zip(ids, bpred.tolist())))
+        # recall on biased rows split by how sure the annotator was, and every error by id (no text)
+        conf = {}
+        for i, yt, yp in zip(ids, y, pred):
+            c = row_by_id[i]["confidence"][axis]
+            bucket = conf.setdefault(c, {"biased_rows": 0, "biased_found": 0, "rows": 0, "correct": 0})
+            bucket["rows"] += 1
+            bucket["correct"] += int(yt == yp)
+            if AXES[axis][yt] != NEUTRAL[axis]:
+                bucket["biased_rows"] += 1
+                bucket["biased_found"] += int(yt == yp)
+        diag["confidence"][axis] = {k: conf[k] for k in ("high", "medium", "low") if k in conf}
+        probs = softmax(logits)
+        diag["errors"][axis] = [
+            {"id": i, "gold": AXES[axis][yt], "predicted": AXES[axis][yp], "p_gold": round(float(probs[n, yt]), 3),
+             "confidence": row_by_id[i]["confidence"][axis], "article_type": row_by_id[i]["article_type"]}
+            for n, (i, yt, yp) in enumerate(zip(ids, y, pred)) if yt != yp]
+    pol = {e["id"]: e for e in diag["errors"]["political"]}
+    diag["direction_errors"] = sorted(i for i, e in pol.items() if {e["gold"], e["predicted"]} == {"Left", "Right"})
     metrics["diagnostics"] = diag
     metrics["temperatures"] = {a: diag["calibration"][a]["temperature"] for a in AXES}
 
@@ -250,6 +269,23 @@ def render(m, folds, base, partial):
               f"model's top phrases for the gold label share words with the annotator's spans at a mean word-F1 "
               f"of {_pct(e['mean_word_f1'])}, against {_pct(e['random_word_f1'])} for random words.", ""]
 
+    L += ["## Where the errors are", "",
+          "**By annotator confidence.** Recall on biased rows (Left/Right, Misogynistic/Misandrist), split by the "
+          "confidence the annotator gave the label. If the model misses mostly low-confidence rows, much of the "
+          "error is in cases the annotator also found borderline.", ""]
+    body = []
+    for axis in AXES:
+        for c, v in d["confidence"][axis].items():
+            rec = f"{_pct(v['biased_found'] / v['biased_rows'])} ({v['biased_found']}/{v['biased_rows']})" \
+                if v["biased_rows"] else "–"
+            body.append([axis, c, rec, f"{_pct(v['correct'] / v['rows'])} ({v['correct']}/{v['rows']})"])
+    L += [_table(["Axis", "Annotator confidence", "Recall on biased rows", "Accuracy on all rows"], body), ""]
+    de = d["direction_errors"]
+    L += [f"**Direction errors.** {len(de)} political row(s) were predicted on the opposite side (Left as Right or "
+          f"Right as Left){': ' + ', '.join(de) if de else ''}. These are worse than calling a biased row Center: "
+          "the model saw partisan framing but read its direction wrongly.", "",
+          "Every misclassified row is listed by id in `metrics.json` under `diagnostics.errors`. To read them with "
+          "their text from your local copy of the dataset: `python -m newsbias.errors " + m["run"] + "`.", ""]
     L += ["## Calibration", "",
           "A single temperature per axis fitted on these out-of-fold logits. The final model applies it, so the "
           "confidence the platform shows is closer to the real hit rate. ECE is the gap between confidence and "

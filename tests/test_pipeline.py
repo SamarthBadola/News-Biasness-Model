@@ -74,3 +74,16 @@ def test_final_model_predictor_and_api(cv_run, tiny_config, tmp_path, monkeypatc
         assert bad.status_code == 422
         extra = client.post("/v1/classify", json={**req, "lede": "x"}, headers={"X-API-Key": "k" * 32})
         assert extra.status_code == 422
+
+
+def test_error_listing(cv_run, tiny_config, capsys):
+    from newsbias import errors
+    m = json.loads((cv_run / "t" / "metrics.json").read_text())
+    d = m["diagnostics"]
+    assert set(d["confidence"]["gender"]) <= {"high", "medium", "low"}
+    n_wrong = sum(1 for e in d["errors"]["gender"])
+    assert n_wrong == round((1 - m["primary"]["gender"]["accuracy"]) * 36)
+    errors.main([str(cv_run / "t"), "--axis", "gender"])
+    out = capsys.readouterr().out
+    assert f"gender: {n_wrong} error(s)" in out
+    assert "## Where the errors are" in (cv_run / "t" / "report.md").read_text()

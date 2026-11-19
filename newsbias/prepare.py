@@ -8,6 +8,7 @@ tokenizer can be loaded) and examples of source masking, role masking and Neutra
 preprocessing can be checked by eye before a long run.
 """
 import argparse
+import sys
 import random
 
 from .augment import RoleMasker, gender_swap
@@ -24,6 +25,9 @@ def main(argv=None):
     ap.add_argument("--show-swaps", type=int, default=3)
     ap.add_argument("--show-masks", type=int, default=3)
     args = ap.parse_args(argv)
+    # article text has curly quotes and Indic characters; never crash on a console that cannot show them
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(errors="replace")
     cfg = load_config(args.config, data_path=args.data)
     examples = load_examples(cfg.data_path)
     print(describe(examples))
